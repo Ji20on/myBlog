@@ -1,0 +1,27 @@
+
+html {
+  position: relative;
+  min-height: 100%;
+ 
+}
+
+body {
+  height: 100%;
+   background-color: #d5d8da;
+
+}
+
+
+.port-table{
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.manage-port{
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.active, .nav-item:hover {
+    color: #fff;
+}
