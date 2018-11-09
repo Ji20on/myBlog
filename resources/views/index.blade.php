@@ -13,7 +13,7 @@
         <div class="row">
           <div class="col col-xs-12 col-sm-12 col-md-6 name-wrapper">
             <h1 class="wow slideInLeft hvr-wobble-skew">Hi! Im Mark Jason Landicho</h1>
-            <h3 class="wow slideInLeft hvr-wobble-skew">Web Designer / Developer</h3>
+            <h3 class="wow slideInLeft hvr-wobble-skew">Front-End Developer</h3>
           </div>
           <div class="col col-sm-12 col-md-6 svg-wrapper">
             <svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
