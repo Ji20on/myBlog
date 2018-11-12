@@ -44,6 +44,9 @@ Route::get('dashboard', function () {
     return view('auth.dashboard');
 });
 
+
+
+/*BLOG*/
 Route::get('blog-table', function () {
     return view('auth.blog-table');
 })->name('blog-table');
@@ -52,21 +55,33 @@ Route::get('blog-table', function () {
 Route::get('manage-blog', function () {
     return view('auth.manage-blog');
 });
-
 /*add blog*/
 Route::post('add-blog','BlogController@store');
+
+
+
+/*PORTFOLIOS*/
+Route::get('portfolio-table', function () {
+    return view('auth.portfolio-table');
+});
 
 Route::get('manage-portfolio', function () {
     return view('auth.manage-portfolio');
 });
 
-Route::get('portfolio-table', function () {
-    return view('auth.portfolio-table');
-});
+/*add portfolio*/
+Route::post('add-port','PortfolioController@store');
+
+
+
+
 
 
 /*show form edit blog*/
 Route::get('edit-blog/{id}', 'BlogController@showEdit');
 
 /*action edit*/
-Route::patch('edit-save-blog','BlogController@editSave')->name('edit-save-blog');
+Route::patch('edit-save-blog/{id}','BlogController@editSave')->name('edit-save-blog');
+
+/*action delete*/
+Route::delete('delete-blog','BlogController@deleteBlog')->name('deleteBlog');

@@ -11,4 +11,10 @@ class Portfolio extends Model
     	return $this->hasMany('App\Gallery');
 
     }
+
+    /*show all portfolios*/
+    public static function get_portfolios_post(){
+    	$portfolios = Portfolio::all();
+    	return $portfolios;
+    }
 }

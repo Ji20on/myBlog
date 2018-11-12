@@ -51,7 +51,14 @@
 			$(document).ready( function () {
 				$('#portfolio_id, #blog_id').DataTable();
 			} );
-		</script>
 
-	</body>
-	</html>
+			function deleteBlog(id){
+				document.getElementById('delete_id').value = id;
+			}
+			
+
+	</script>
+
+
+</body>
+</html>

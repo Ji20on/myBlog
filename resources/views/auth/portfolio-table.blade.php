@@ -19,21 +19,25 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Wholesaler</td>
-                        <td>Web Design</td>
-                        <td>lorem ipsum...</td>
-                        <td>image</td>
-                        <td>23</td>
-                        <td>
-                            <button type="button" class="btn btn-success">Edit</button>
-                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#del-port">Delete</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+                 @foreach (App\Portfolio::get_portfolios_post() as $port_post)
+
+                 <tr>
+                    <td>{{$port_post->title}}</td>
+                    <td>{{$port_post->category}}</td>
+                    <td>{{$port_post->description}}</td>
+                    <td><img class="img-fluid" style="width: 50px; height: 50px;" src="{{$port_post->port_thumb}}"></td>
+                    <td>{{$port_post->id}}</td>
+                    <td>
+                        <button type="button" class="btn btn-success">Edit</button>
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#del-port">Delete</button>
+                    </td>
+                </tr>
+
+                @endforeach
+            </tbody>
+        </table>
     </div>
+</div>
 </div>
 
 <!-- delete modal -->
