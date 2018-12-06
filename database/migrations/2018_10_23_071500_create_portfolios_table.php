@@ -18,6 +18,7 @@ class CreatePortfoliosTable extends Migration
             $table->string('title')->unique();
             $table->string('category');
             $table->text('description');
+            $table->text('content');
             $table->string('port_thumb');
             $table->string('slug');
             $table->timestamps();

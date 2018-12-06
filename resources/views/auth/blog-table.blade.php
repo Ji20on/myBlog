@@ -32,9 +32,7 @@
                     <tr>
                         <td>{{str_limit($blog->title,10)}}</td>
                         <td>{{$blog->author}}</td>
-                        <td>{{str_limit($blog->description, 20)}}
-
-                        </td>
+                        <td>{{str_limit($blog->description, 20)}}</td>
                         <td> <img class="img-fluid" style="width: 50px; height: 50px;" src="{{$blog->blog_thumb}}">
                         </td>
                         <td>

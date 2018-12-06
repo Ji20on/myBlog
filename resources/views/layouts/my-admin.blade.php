@@ -24,6 +24,8 @@
 
 		<!-- Custom styles for this template-->
 		<link href="{{ asset('css/admin-style.css') }}" rel="stylesheet">
+		{{-- wysisyg --}}
+		<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	</head>
@@ -55,9 +57,12 @@
 			function deleteBlog(id){
 				document.getElementById('delete_id').value = id;
 			}
-			
 
+			function deletePortfolio(id){
+				document.getElementById('delete_id').value = id;
+			}
 	</script>
+	<script src="{{ asset('js/editor.js') }}"></script>
 
 
 </body>

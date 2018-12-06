@@ -6,7 +6,7 @@
  <!-- header -->
   <header>
     <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-      <source src="img/vector.mp4" type="video/mp4">
+      <source src="img/tech.mp4" type="video/mp4">
       </video>
       <!-- front logo -->
       <div class="container-fluid front-container">
@@ -66,35 +66,19 @@
     <h3 class="text-center">my latest works</h3>
     <hr class="style-one"><br>
     <div class="row">
+      @foreach(App\Portfolio::latest_port() as $portfolio)
       <div class="col-md-4 hvr-grow" data-wow-duration="2s" data-wow-delay="5s">
+        <a href="{{ route('port_link',['slug'=>$portfolio->slug]) }}">
         <div class="card">
-          <img class="card-img-top" src="https://picsum.photos/150/100?image=3" alt="Card image cap">
+          <img class="card-img-top" src="{{ asset($portfolio->port_thumb) }}" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">UX & UI DESIGN</h5>
-            <p class="card-text">Quotation system</p>
+            <h5 class="card-title">{{$portfolio->title}}</h5>
+            <p class="card-text">{{$portfolio->category}}</p>
           </div>
         </div>
+        </a>
       </div>
-
-      <div class="col-md-4 hvr-grow">
-        <div class="card">
-          <img class="card-img-top" src="https://picsum.photos/150/100?image=2" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">BANNER DESIGNS</h5>
-            <p class="card-text">promotion and ads for the website</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 hvr-grow">
-        <div class="card">
-          <img class="card-img-top" src="https://picsum.photos/150/100?image=1" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Wholesaler</h5>
-            <p class="card-text">a website for the the dealer</p>
-          </div>
-        </div>
-      </div>
+      @endforeach
     </div>
   </div>
 

@@ -15,17 +15,18 @@ Route::get('/', function () {
     return view('index');
 });
 
+/*about link*/
 Route::get('about', function () {
     return view('pages.about');
-});
+})->name('about');
 
-Route::get('portfolios', function () {
-    return view('pages.portfolios');
-});
+/*get all portfolio*/
+Route::get('/portfolio/', 'PortfolioController@getAllPort')->name('all-port');
+ /*get individual portfolio*/
+Route::get('/portfolio/{slug}', 'PortfolioController@getPortLink')->name('port_link');
 
-Route::get('portfolio-page', function () {
-    return view('pages.portfolio-page');
-});
+
+
 
 Route::get('blogs', function () {
     return view('pages.blogs');
@@ -35,9 +36,15 @@ Route::get('blog-page', function () {
     return view('pages.blog-page');
 });
 
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+/*************************************************middleware*/
+
+Route::middleware(['auth'])->group(function(){
 
 /*admin route*/
 Route::get('dashboard', function () {
@@ -45,8 +52,7 @@ Route::get('dashboard', function () {
 });
 
 
-
-/*BLOG*/
+/************************************************BLOG*/
 Route::get('blog-table', function () {
     return view('auth.blog-table');
 })->name('blog-table');
@@ -58,25 +64,6 @@ Route::get('manage-blog', function () {
 /*add blog*/
 Route::post('add-blog','BlogController@store');
 
-
-
-/*PORTFOLIOS*/
-Route::get('portfolio-table', function () {
-    return view('auth.portfolio-table');
-});
-
-Route::get('manage-portfolio', function () {
-    return view('auth.manage-portfolio');
-});
-
-/*add portfolio*/
-Route::post('add-port','PortfolioController@store');
-
-
-
-
-
-
 /*show form edit blog*/
 Route::get('edit-blog/{id}', 'BlogController@showEdit');
 
@@ -85,3 +72,26 @@ Route::patch('edit-save-blog/{id}','BlogController@editSave')->name('edit-save-b
 
 /*action delete*/
 Route::delete('delete-blog','BlogController@deleteBlog')->name('deleteBlog');
+
+
+
+/*************************************PORTFOLIOS*/
+Route::get('portfolio-table', function () {
+    return view('auth.portfolio-table');
+})->name('portfolio-table');
+
+Route::get('manage-portfolio', function () {
+    return view('auth.manage-portfolio');
+});
+
+/*add portfolio*/
+Route::post('add-port','PortfolioController@store');
+
+/*show form edit portfolio*/
+Route::get('edit-portfolio/{id}','PortfolioController@showEdit');
+
+/*action edit portfolio*/
+Route::patch('edit-save-port/{id}','PortfolioController@editSave')->name('edit-save-port');
+/*action delete*/
+Route::delete('delete-portfolio','PortfolioController@deletePortfolio')->name('deletePortfolio');
+});

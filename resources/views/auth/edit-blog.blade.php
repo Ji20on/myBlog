@@ -23,7 +23,7 @@
   </div>
   @endif
   <h3>Edit Blog</h3> <br> <br>
-  <form action="{{{ route('edit-save-blog',['id'=> $blog->id]) }}}" method="POST" enctype="multipart/form-data">
+  <form action="{{ route('edit-save-blog',['id'=> $blog->id]) }}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('PATCH')
 

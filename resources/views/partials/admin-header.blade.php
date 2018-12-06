@@ -10,7 +10,10 @@
 					<i class="fa fa-sign-out"></i>
 				</a>
 				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
-					<a class="dropdown-item" href="#">Logout</a>
+					<form action="{{ route('logout') }}" method="POST">
+						@csrf
+					<button type="submit" class="dropdown-item" >Logout </button>
+					</form>
 				</div>
 			</li>
 		</ul>
@@ -32,7 +35,7 @@
 				</a>
 			</li>
 			<li class="nav-item">
-				<a href="portfolio-table" class="nav-link" href="charts.html">
+				<a href="{{route('portfolio-table')}}" class="nav-link" href="charts.html">
 					<i class="fa fa-fw fa-folder"></i>
 					<span>Manage Porfolios</span></a>
 				</li>

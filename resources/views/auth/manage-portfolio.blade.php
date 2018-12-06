@@ -2,7 +2,6 @@
 @section('title','admin')
 @section('content')
 
-
 <div class="container manage-port">
   {{-- error --}}
   @if(count($errors)>0)
@@ -33,17 +32,17 @@
           <input name="category" type="text" class="form-control" id="port-category" placeholder="Enter Portfolio Category">
         </div>
         <div class="form-group">
-          <textarea name="desc" class="form-control" id="port-desc" rows="10" placeholder="Content here..."></textarea>
+          <textarea name="desc" class="form-control" id="port-desc" rows="3" placeholder="Content here..."></textarea>
+        </div>
+        <div class="form-group">
+          <textarea name="content" class="form-control wysyg_editor" id="port-content" rows="10" placeholder="Content here..."></textarea>
         </div>
       </div>
       <div class="col col-md-4">
        <div class="form-group">
         <label for="port-thumb">Fearured Image</label>
-        <input name="portthumb" type="file" class="form-control-file" id="port-thumb" aria-describedby="fileHelp">
-      </div>
-      <div class="form-group">
-        <label for="port-gallery">Gallery Image</label>
-        <input name="gallery[]" type="file" class="form-control-file" id="port-gallery" aria-describedby="fileHelp" multiple>
+        <input name="portthumb" type="text" class="form-control-file" id="port-thumb" aria-describedby="fileHelp">
+        <img src="" id="preview">
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-primary">Publish</button>
@@ -52,5 +51,8 @@
   </div>
 </form>
 </div>
+
+
+
 
 @endsection
