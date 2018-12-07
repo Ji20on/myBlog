@@ -24,14 +24,19 @@ padding: 20px;
 }
 }
 
-#navbarColor01{
-  margin-left: 50px;
-}
+/*#navbarColor01>ul>li{
+  margin-right:0px;
+}*/
+
+
 @media (max-width: 992px) { 
   #navbarColor01{
     margin-top: 20px;
     text-align: center;
   }
+  #navbarColor01>ul>li{
+  margin-right:0px;
+}
 }
 header {
   position: relative;
@@ -239,7 +244,19 @@ div.fb-comments{
   border-bottom: 1px solid #eee; 
 }
 
-/*view all blog page*/
+/*view all blogs page*/
 .all-blog{
   margin-top: 50px;
+}
+
+/*individual blog page*/
+.blog-wrap{
+  margin-top: 50px;
+}
+
+.comments-section{
+  margin-bottom: 50px;
+}
+.more-blogs{
+  margin-bottom: 50px;
 }

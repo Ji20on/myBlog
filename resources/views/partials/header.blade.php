@@ -22,8 +22,6 @@
         </li>
         <li class="nav-item"><a class="nav-link" href="{{ route('downloadcv') }}">Download my CV</a></li>
       </ul>
-
-
       <ul class="navbar-nav navbar-right nav-icons">
         <li><a  href="https://www.facebook.com/Ji20on" target="_new" data-toggle="tooltip" data-placement="top" title="Facebook "><i class="fa fa-facebook-f fa-2x"></i></a></li>
        <li><a  href="https://www.instagram.com/ji20on/?hl=en" target="_new" data-toggle="tooltip" data-placement="top" title="Instagram "><i class="fa fa-instagram fa-2x"></i></a></li>
