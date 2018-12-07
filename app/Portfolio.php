@@ -25,8 +25,9 @@ class Portfolio extends Model
     	return $latest;
     }
 
+    /*show portfolio where in out*/
     public static function out_of_port($id){
-        $outOfPort = DB::table('portfolios')->whereNotIn('id',[$id])->get();
+        $outOfPort = DB::table('portfolios')->whereNotIn('id',[$id])->limit(3)->get();
         return $outOfPort;
     }
 }

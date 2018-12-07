@@ -46,10 +46,10 @@
          <div class="form-group">
           <label for="port-thumb">Fearured Image</label>
           <input name="portthumb" type="text" class="form-control-file" value="{{$portfolio->port_thumb}}" id="port-thumb" aria-describedby="fileHelp">
-          <img id="preview" style="width: 100px; height: 50px;" src="{{ asset($portfolio->port_thumb) }}">
+          <img id="preview" class="img-fluid" src="{{ asset($portfolio->port_thumb) }}">
         </div>
         <div class="form-group">
-          <button type="submit" class="btn btn-primary">Save</button>
+          <button type="submit" class="btn btn-primary pull-right">Save</button>
         </div>
       </div>
     </div>

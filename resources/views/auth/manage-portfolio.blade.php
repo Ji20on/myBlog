@@ -41,8 +41,8 @@
       <div class="col col-md-3">
        <div class="form-group">
         <label for="port-thumb">Fearured Image</label>
-        <input name="portthumb" type="text" class="form-control-file" id="port-thumb" aria-describedby="fileHelp">
-        <img src="" id="preview">
+        <input name="portthumb" type="text" class="form-control file" id="port-thumb" placeholder="Paste img URL here." aria-describedby="fileHelp">
+        <img class="img-fluid" src="" id="preview">
       </div>
       <div class="form-group pull-right">
         <button type="submit" class="btn btn-primary">Publish</button>

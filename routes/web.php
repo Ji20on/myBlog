@@ -26,16 +26,10 @@ Route::get('/portfolio', 'PortfolioController@getAllPort')->name('all-port');
 Route::get('/portfolio/{slug}', 'PortfolioController@getPortLink')->name('port_link');
 
 
-
-
-Route::get('blogs', function () {
-    return view('pages.blogs');
-});
-
-Route::get('blog-page', function () {
-    return view('pages.blog-page');
-});
-
+/*get individual blog*/
+Route::get('/blog/{slug}', 'BlogController@getBlogLink')->name('blog_link');
+/*get all blog*/
+Route::get('/blog', 'BlogController@getAllBlog')->name('all-blog');
 
 
 Auth::routes();
@@ -95,3 +89,7 @@ Route::patch('edit-save-port/{id}','PortfolioController@editSave')->name('edit-s
 /*action delete*/
 Route::delete('delete-portfolio','PortfolioController@deletePortfolio')->name('deletePortfolio');
 });
+
+
+/*download file*/
+Route::get('download-cv','PortfolioController@downloadCv')->name('downloadcv');

@@ -10,9 +10,9 @@
   @if(count($errors)>0)
   @foreach($errors->all() as $error);
   <div class="alert alert-dismissible alert-danger">
-  <button type="button" class="close" data-dismiss="alert">&times;</button>
-  <strong>{{$error}}</strong>
-</div>
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>{{$error}}</strong>
+  </div>
   @endforeach
   @endif
   {{-- SUCCESS --}}
@@ -26,7 +26,7 @@
   <form action="add-blog" method="Post" enctype="multipart/form-data">
     @csrf
     <div class="row">
-      <div class="col col-md-8">
+      <div class="col col-md-9">
         <div class="form-group">
           <input name="title" type="text" class="form-control" id="blog-title" placeholder="Enter Post Title">
         </div>
@@ -34,16 +34,16 @@
           <input name="author" type="text" class="form-control" id="blog-author" placeholder="Enter Post author">
         </div>
         <div class="form-group">
-          <textarea name="desc" class="form-control" id="port-desc" rows="10" placeholder="Content here..."></textarea>
+          <textarea name="content" class="form-control wysyg_editor" id="content" rows="10" placeholder="Content here..."></textarea>
         </div>
       </div>
-      <div class="col col-md-4">
+      <div class="col col-md-3">
        <div class="form-group">
-        <label for="blog-thumb">Fearured Image</label>
-        <input name="blogthumb" type="file" class="form-control-file" id="blog-thumb" aria-describedby="fileHelp">
+        <input name="blogthumb" type="text" class="form-control file" id="blog-thumb" placeholder="Paste img URL here." aria-describedby="fileHelp">
+        <img class="img-fluid" src="" id="preview">
       </div>
       <div class="form-group">
-        <button type="submit" class="btn btn-primary">Publish</button>
+        <button type="submit" class="btn btn-primary pull-right">Publish</button>
       </div>
     </div>
   </div>

@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Portfolio;
 use App\Gallery;
-
 use Session;
+use Response;
 
 class PortfolioController extends Controller
 {
@@ -95,5 +95,13 @@ class PortfolioController extends Controller
         /*view all portfolio*/
     public function getAllPort(){
     	return view('pages.portfolios');
+    }
+
+
+    /*download*/
+    public function downloadCv(){
+    	$cv = public_path().'/img/2/Files/markjasonlandicho_resume.pdf';
+    	$header = ['Content-Type:application/pdf'];
+    	return Response::download($cv,'Mark Jason Landicho Resume',$header);
     }
 }

@@ -1,39 +1,26 @@
   
 /*svg hover*/
-var clicker = document.querySelector('#logo');
-
-clicker.addEventListener('click', function(){
-
-  this.classList.toggle('clickit');
-
+$("#logo").on('click',function(){
+  $(this).toggleClass('clickit');
 });
 
 
-/*icon tooltip*/
-$(function () {
-  $("[rel='tooltip']").tooltip();
-});
+
+/*add class menu*/
+var pathName = window.location.pathname;
+if (pathName == '/'){
+   $("#home").addClass("active"); 
+}
+else if(pathName == '/about'){
+   $("#about").addClass("active");
+}
+else if(pathName == '/portfolio'){
+  $("#works").addClass("active");
+}
+else if(pathName == '/blog'){
+  $("#blog").addClass("active");
+}
 
 
-var lang = {
-  "html": "100%",
-  "css": "90%",
-  "javascript": "70%",
-  "php": "55%",
-  "angular": "65%"
-};
 
-var multiply = 4;
-
-$.each( lang, function( language, pourcent) {
-
-  var delay = 700;
-  
-  setTimeout(function() {
-    $('#'+language+'-pourcent').html(pourcent);
-  },delay*multiply);
-  
-  multiply++;
-
-});
 

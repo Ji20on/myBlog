@@ -10,9 +10,20 @@ html, body {
 .card{
   margin-bottom: 20px;
 }
-
-
 /*navbar*/
+.nav-icons>li>a{
+color: #fff;
+padding: 20px;
+}
+@media (max-width: 992px) { 
+.nav-icons>li{
+  display: inline-block;
+}
+.navbar-nav.nav-icons{
+  display: block;
+}
+}
+
 #navbarColor01{
   margin-left: 50px;
 }
@@ -226,4 +237,9 @@ div.fb-comments{
   margin-bottom: 50px;
   padding-bottom: 50px;
   border-bottom: 1px solid #eee; 
+}
+
+/*view all blog page*/
+.all-blog{
+  margin-top: 50px;
 }

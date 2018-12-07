@@ -1,22 +1,4 @@
-
-@extends('layouts.my-template')
-@section('title','Mark Jason Landicho')
-@section('content')
-
-<!-- header -->
-<header>
-  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-    <source src="img/tech.mp4" type="video/mp4">
-    </video>
-    <!-- front logo -->
-    <div class="container-fluid front-container">
-      <div class="row">
-        <div class="col col-xs-12 col-sm-12 col-md-6 name-wrapper">
-          <h1 class="wow slideInLeft hvr-wobble-skew">Hi! Im Mark Jason Landicho</h1>
-          <h3 class="wow slideInLeft hvr-wobble-skew">Front-End Web Developer</h3>
-        </div>
-        <div class="col col-sm-12 col-md-6 svg-wrapper">
-          <svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+ <svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           viewBox="0 0 283 285" style="enable-background:new 0 0 283 285;" xml:space="preserve">
           <g>
             <path id="solologo" class="st0" d="M62.833,69.806c0,1.474,0,2.947,0,4.421c-0.003,26.331,0.072,52.662-0.102,78.991
@@ -56,29 +38,3 @@
             c-19.266-36.488-38.526-72.98-57.798-109.465c-0.444-0.84-1-1.62-1.504-2.428C63.503,69.639,63.168,69.723,62.833,69.806z"/>
           </g>
         </svg>
-      </div>
-    </div>
-  </div>
-</header>
-<!-- myworks-->
-<div class="container myworks">
-  <h3 class="text-center">my latest works</h3>
-  <hr class="style-one"><br>
-  <div class="row">
-    @foreach(App\Portfolio::latest_port() as $portfolio)
-    <div class="col-md-4 hvr-grow" data-wow-duration="2s" data-wow-delay="5s">
-      <a href="{{ route('port_link',['slug'=>$portfolio->slug]) }}">
-        <div class="card">
-          <img class="card-img-top" src="{{ asset($portfolio->port_thumb) }}" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">{{str_limit($portfolio->title, 20)}}</h5>
-            <p class="card-text">{{str_limit($portfolio->category, 20)}}</p>
-          </div>
-        </div>
-      </a>
-    </div>
-    @endforeach
-  </div>
-</div>
-
-@endsection
