@@ -24,7 +24,7 @@
   <form action="add-port" method="Post" enctype="multipart/form-data" >
     @csrf
     <div class="row">
-      <div class="col col-md-8">
+      <div class="col col-md-9">
         <div class="form-group">
           <input name="title" type="text" class="form-control" id="port-title" placeholder="Enter Portfolio Title">
         </div>
@@ -38,13 +38,13 @@
           <textarea name="content" class="form-control wysyg_editor" id="port-content" rows="10" placeholder="Content here..."></textarea>
         </div>
       </div>
-      <div class="col col-md-4">
+      <div class="col col-md-3">
        <div class="form-group">
         <label for="port-thumb">Fearured Image</label>
         <input name="portthumb" type="text" class="form-control-file" id="port-thumb" aria-describedby="fileHelp">
         <img src="" id="preview">
       </div>
-      <div class="form-group">
+      <div class="form-group pull-right">
         <button type="submit" class="btn btn-primary">Publish</button>
       </div>
     </div>

@@ -72,8 +72,8 @@
         <div class="card">
           <img class="card-img-top" src="{{ asset($portfolio->port_thumb) }}" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">{{$portfolio->title}}</h5>
-            <p class="card-text">{{$portfolio->category}}</p>
+            <h5 class="card-title">{{str_limit($portfolio->title, 20)}}</h5>
+            <p class="card-text">{{str_limit($portfolio->category, 20)}}</p>
           </div>
         </div>
         </a>

@@ -13,7 +13,7 @@
 @endif
 </div>
 
-<div class="container port-table">
+<div class="container blog-table">
     <h2>Blog</h2> <a href="manage-blog" type="button" class="btn btn-primary">Add New</a> <br><br>
     <div class="row">
         <div class="col">

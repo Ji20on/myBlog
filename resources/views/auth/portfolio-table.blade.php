@@ -30,21 +30,18 @@
                     </tr>
                 </thead>
                 <tbody>
-                 @foreach (App\Portfolio::get_portfolios_post() as $port_post)
-
-                 <tr>
-                    <td>{{$port_post->title}}</td>
-                    <td>{{$port_post->category}}</td>
-                    <td>{{str_limit($port_post->description, 20)}}</td>
-                    <td>{{str_limit($port_post->content, 20)}}</td>
+                    @foreach (App\Portfolio::get_portfolios_post() as $port_post)
+                   <tr>
+                    <td>{{str_limit($port_post->title, 20)}}</td>
+                    <td>{{str_limit($port_post->category, 20)}}</td>
+                    <td>{{str_limit($port_post->description, 15)}}</td>
+                    <td>{{str_limit($port_post->content, 15)}}</td>
                     <td><img class="img-fluid" style="width: 50px; height: 50px;" src="{{$port_post->port_thumb}}"></td>
-                    <td>{{$port_post->id}}</td>
                     <td>
                         <a href="edit-portfolio/{{$port_post->id}}" type="button" class="btn btn-success">Edit</a>
                         <button onclick="deletePortfolio({{$port_post->id}})" type="button" class="btn btn-danger" data-toggle="modal" data-target="#del-port">Delete</button>
                     </td>
                 </tr>
-
                 @endforeach
             </tbody>
         </table>

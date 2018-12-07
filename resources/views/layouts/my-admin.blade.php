@@ -51,7 +51,8 @@
 		<script src="{{ asset('js/admin-custom.js') }}"></script>
 		<script>
 			$(document).ready( function () {
-				$('#portfolio_id, #blog_id').DataTable();
+				$('#portfolio_id').DataTable();
+				$('#blog_id').DataTable();
 			} );
 
 			function deleteBlog(id){

@@ -21,7 +21,7 @@ Route::get('about', function () {
 })->name('about');
 
 /*get all portfolio*/
-Route::get('/portfolio/', 'PortfolioController@getAllPort')->name('all-port');
+Route::get('/portfolio', 'PortfolioController@getAllPort')->name('all-port');
  /*get individual portfolio*/
 Route::get('/portfolio/{slug}', 'PortfolioController@getPortLink')->name('port_link');
 
