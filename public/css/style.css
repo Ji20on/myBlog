@@ -33,11 +33,23 @@ padding: 20px;
   #navbarColor01{
     margin-top: 20px;
     text-align: center;
+
   }
   #navbarColor01>ul>li{
   margin-right:0px;
 }
 }
+
+#wave{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+ 
+}
+#wave path{
+  fill: #fff;
+}
+
 header {
   position: relative;
   width: 100%;

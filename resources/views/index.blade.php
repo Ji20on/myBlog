@@ -5,6 +5,11 @@
 
 <!-- header -->
 <header>
+  {{-- wave bottom --}}
+  <svg id="wave" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 91">
+    <path class="cls-1" d="M1399.5,149.5" transform="translate(0 -209)"/><path class="cls-2" d="M0,261s281-80,600-25,470,40,550,25,250-52,250-52v91H0Z" transform="translate(0 -209)"/>
+  </svg>
+
   <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
     <source src="img/tech.mp4" type="video/mp4">
     </video>

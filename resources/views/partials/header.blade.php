@@ -7,7 +7,7 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarColor01">
-      <ul class="navbar-nav mx-auto">
+      <ul class="navbar-nav ml-auto">
         <li id="home" class="nav-item">
           <a class="nav-link" href="/">HOME<span class="sr-only">(current)</span></a>
         </li>
