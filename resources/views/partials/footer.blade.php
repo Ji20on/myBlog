@@ -1,18 +1,22 @@
-<!-- footer -->
-<footer class="footer">
+
+<footer id="footer" class="black text-center">
   <div class="container">
-    <div class="row">
-      <div class="col-md-6 copyright-wrapper">
-       <span class="text-center copyright">&#9400; 2018 MARK JASON LANDICHO</span>
-     </div>
-     <div class="col-md-6">
-      <ul class="social-icon">
-        <li><a  href="" data-toggle="tooltip" data-placement="top" title="Facebook "><i class="fa fa-facebook-f"></i></a></li>
-        <li><a  href="" data-toggle="tooltip" data-placement="top" title="Instagram "><i class="fa fa-instagram"></i></a></li>
-        <li><a  href="" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
-        <li><a  href="" data-toggle="tooltip" data-placement="top" title="Gmail"><i class="fa fa-envelope"></i></a></li>
+    <a href="/" class="footer-logo">
+      <img class="img-fluid" src="{{ asset('img/solologo.png') }}" style="max-width:60px;">
+    </a>
+    <div class="logo-title">
+      <span>MARK JASON LANDICHO</span>
+    </div>
+    <div class="social-link">
+      <ul>
+        <li><a  href="https://www.facebook.com/Ji20on" target="_new" data-toggle="tooltip" data-placement="top" title="Facebook "><i class="fa fa-facebook-f fa-2x"></i></a></li>
+        <li><a  href="https://www.instagram.com/ji20on/?hl=en" target="_new" data-toggle="tooltip" data-placement="top" title="Instagram "><i class="fa fa-instagram fa-2x"></i></a></li>
+        <li><a  href="https://www.linkedin.com/in/mark-jason-landicho-bb5ab1138/" target="_new" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin fa-2x"></i></a></li>
+        <li><a  href="https://plus.google.com/u/0/100269729438138254620" target="_new" data-toggle="tooltip" data-placement="top" title="Gmail"><i class="fa fa-envelope fa-2x"></i></a></li>
       </ul>
     </div>
+    <div class="copyright">
+      © MJL 2018.
+    </div>
   </div>
-</div>
 </footer>

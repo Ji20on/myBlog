@@ -31,3 +31,5 @@
    </div>
  </div>
 </nav>
+
+@include('pages.pre-loader')

@@ -2,6 +2,7 @@
   @section('title','Mark Jason Landicho')
   @section('content')
 
+  @include('partials.breadcrumbs')
   <div class="container all-blog">
   	<div class="row">
   		@foreach(App\Blog::get_blog_post() as $allBlog)

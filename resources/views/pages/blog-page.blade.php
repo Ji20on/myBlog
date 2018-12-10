@@ -2,7 +2,7 @@
  @section('title','Mark Jason Landicho')
  @section('content')
 
-
+ @include('partials.breadcrumbs')
  <div class="container blog-wrap">
  	<div class="row">
  		<div class="col col-md-8 offset-md-2 blog-card">

@@ -2,6 +2,8 @@
   @section('title','Mark Jason Landicho')
   @section('content')
 
+
+ @include('partials.breadcrumbs')
   <div class="container port-details">
   	<div class="row">
   		<div class="col-sm-12 col-md-6">

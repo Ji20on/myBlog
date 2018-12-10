@@ -45,14 +45,14 @@ header{
     position: relative;
     width: 100%;
 }
-header .front-container{
+.front-container{
   position: relative;
- /* z-index: 100;*/
+  z-index: 100;
  padding: 40px;
 }
 
 @media (max-width: 768px) { 
-  header .front-container {
+.front-container {
     background-image: url("../img/teck.png");
     background-position: center; 
     background-repeat: no-repeat;
@@ -257,4 +257,22 @@ div.fb-comments{
 }
 .more-blogs{
   margin-bottom: 50px;
+}
+
+/*FOOTER*/
+.social-link>ul{
+  padding: 0px;
+  margin-top: 10px;
+}
+.social-link>ul>li{
+  list-style: none;
+  display: inline;
+  padding: 10px;
+}
+.social-link>ul>li>a{
+  color: #fff;
+}
+.logo-title{
+  padding: 20px;
+  color: #fff;
 }

@@ -1,7 +1,7 @@
   
 /*svg hover*/
 $("#logo").on('click',function(){
-  $(this).toggleClass('clickit');
+	$(this).toggleClass('clickit');
 });
 
 
@@ -9,18 +9,29 @@ $("#logo").on('click',function(){
 /*add class menu*/
 var pathName = window.location.pathname;
 if (pathName == '/'){
-   $("#home").addClass("active"); 
+	$("#home").addClass("active"); 
 }
 else if(pathName == '/about'){
-   $("#about").addClass("active");
+	$("#about").addClass("active");
 }
 else if(pathName == '/portfolio'){
-  $("#works").addClass("active");
+	$("#works").addClass("active");
 }
 else if(pathName == '/blog'){
-  $("#blog").addClass("active");
+	$("#blog").addClass("active");
 }
 
+/*preloader*/
+/*$(window).on('load',function(){
+	$('#pre-loader-wrap').show();
+});
 
-
+$(document).ready(function(){
+$('#pre-loader-wrap').hide();
+});
+*/
+var overlay = document.getElementById("pre-loader-wrap");
+window.addEventListener('load', function(){
+  overlay.style.display = 'none';
+})
 
