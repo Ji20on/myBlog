@@ -3,6 +3,7 @@
  @section('content')
 
  @include('partials.breadcrumbs')
+ <input type="hidden" id="link-page" value="blog">
  <div class="container blog-wrap">
  	<div class="row">
  		<div class="col col-md-8 offset-md-2 blog-card">

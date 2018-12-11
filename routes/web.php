@@ -36,7 +36,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-/*************************************************middleware*/
+/*************************************************middleware********************/
 
 Route::middleware(['auth'])->group(function(){
 
@@ -90,6 +90,11 @@ Route::patch('edit-save-port/{id}','PortfolioController@editSave')->name('edit-s
 Route::delete('delete-portfolio','PortfolioController@deletePortfolio')->name('deletePortfolio');
 });
 
+/*************************************end middleware***********************************/
 
 /*download file*/
 Route::get('download-cv','PortfolioController@downloadCv')->name('downloadcv');
+
+/*message contact me*/
+/*message*/
+Route::post('send-message','MessageController@send');

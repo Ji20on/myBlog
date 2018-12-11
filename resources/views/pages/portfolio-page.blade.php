@@ -4,6 +4,7 @@
 
 
  @include('partials.breadcrumbs')
+  <input type="hidden" id="link-page" value="port">
   <div class="container port-details">
   	<div class="row">
   		<div class="col-sm-12 col-md-6">

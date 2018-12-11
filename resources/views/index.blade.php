@@ -16,7 +16,7 @@
         <h3 class="wow slideInLeft hvr-wobble-skew">Front-End Web Developer</h3>
       </div>
       <div class="col col-sm-12 col-md-6 svg-wrapper">
-        @include('partials.logo-svg');
+        @include('partials.logo-svg')
       </div>
     </div>
   </div>
@@ -49,12 +49,73 @@
     @endforeach
   </div>
 </div>
+
+
+
+{{-- contact --}}
+
+
+<!-- contact -->
+<div id="contact-me" class="container contact-me">
+  <h3 class="text-center">CONTACT ME</h3>
+  <hr class="style-one">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      {{-- ERROR --}}
+      @if(count($errors)>0)
+      @foreach($errors->all() as $error);
+      <div class="alert alert-dismissible alert-danger">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>{{$error}}</strong>
+      </div>
+      @endforeach
+      @endif
+      {{-- SUCCESS --}}
+      @if(Session::has('msg'))
+      <div class="alert alert-dismissible alert-success">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>{{Session::get('msg')}}</strong>
+      </div>
+      @endif
+      <form action="send-message" method="POST" enctype="multipart/form-data">
+        @csrf
+        <div class="form-group">
+          <!-- Name -->
+          <input type="text" name="name" id="name" class="textform form-control" placeholder="Name *" maxlength="100" required="">
+        </div>
+        <div class="form-group">
+         <!-- Email -->
+         <input type="email" name="email" id="email" class="textform form-control" placeholder="Email *" maxlength="100" required="">
+       </div>
+       <div class="form-group">
+        <!-- phone -->
+        <input type="text" name="phone" id="phone" class="textform form-control" placeholder="Phone" maxlength="100">
+      </div>
+      <div class="form-group">
+       <!-- Comment -->
+       <textarea name="comment" id="comment" class="form-control comment" placeholder="Comment" maxlength="400"></textarea>
+     </div>
+     <div class="form-group full-width pull-right">
+       <button type="submit" class="btn btn-primary">
+         Send Message
+       </button>
+     </div>
+   </form>
+ </div>
+</div>
+</div>
+
+
+
+
+
+
+
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </script>
+
 <script>
-  particlesJS.load('particles-js','js/particles.json', function(){
-    console.log('particles.json loaded...');
-  });
+  particlesJS.load('particles-js','js/particles.json');
 </script>
 
 @endsection

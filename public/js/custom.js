@@ -8,6 +8,7 @@ $("#logo").on('click',function(){
 
 /*add class menu*/
 var pathName = window.location.pathname;
+var linkPage = $("#link-page").val();
 if (pathName == '/'){
 	$("#home").addClass("active"); 
 }
@@ -20,18 +21,18 @@ else if(pathName == '/portfolio'){
 else if(pathName == '/blog'){
 	$("#blog").addClass("active");
 }
+else if(linkPage != '' && linkPage == 'port') {
+	$("#works").addClass("active");
+}
+else if (linkPage != '' && linkPage == 'blog'){
+	$("#blog").addClass("active");
+}
 
-/*preloader*/
-/*$(window).on('load',function(){
-	$('#pre-loader-wrap').show();
-});
 
-$(document).ready(function(){
-$('#pre-loader-wrap').hide();
-});
-*/
+
+/*pre loader*/
+
 var overlay = document.getElementById("pre-loader-wrap");
 window.addEventListener('load', function(){
-  overlay.style.display = 'none';
-})
-
+		overlay.style.display = 'none';
+	});

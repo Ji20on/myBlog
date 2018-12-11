@@ -3,6 +3,7 @@
 @section('content')
 
 
+ @include('partials.breadcrumbs')
 <div class="container about-wrapper">
 	<div class="row">
 		<div class="col col-md-6">
