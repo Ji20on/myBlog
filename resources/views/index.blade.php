@@ -23,11 +23,7 @@
   {{-- background --}}
   <div id="particles-js"> 
   </div>
-
 </header>
-
-
-
 
 <!-- myworks-->
 <div class="container myworks">

@@ -36,6 +36,15 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+/*login*/
+
+$this->get('wp-nashfarom', 'Auth\LoginController@showLoginForm')->name('');
+
+Route::fallback(function(){
+	abort(404);
+});
+
 /*************************************************middleware********************/
 
 Route::middleware(['auth'])->group(function(){
