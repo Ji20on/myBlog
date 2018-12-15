@@ -25,3 +25,8 @@ body {
 .active, .nav-item:hover {
     color: #fff;
 }
+
+  .preview-img {
+    height: 200px;
+    overflow: hidden;
+  }

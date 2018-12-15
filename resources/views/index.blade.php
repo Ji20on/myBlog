@@ -34,7 +34,8 @@
     <div class="col-md-4 hvr-grow" data-wow-duration="2s" data-wow-delay="5s">
       <a href="{{ route('port_link',['slug'=>$portfolio->slug]) }}">
         <div class="card">
-          <img class="card-img-top" src="{{ asset($portfolio->port_thumb) }}" alt="Card image cap">
+          <div class="card-img">
+          <img class="card-img-top" src="{{ asset($portfolio->port_thumb) }}" alt="Card image cap"></div>
           <div class="card-body">
             <h5 class="card-title">{{str_limit($portfolio->title, 20)}}</h5>
             <p class="card-text">{{str_limit($portfolio->category, 20)}}</p>
@@ -102,11 +103,6 @@
 </div>
 
 
-
-
-
-
-
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </script>
 
@@ -115,3 +111,4 @@
 </script>
 
 @endsection
+
