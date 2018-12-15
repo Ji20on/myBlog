@@ -258,7 +258,8 @@ header{
     /*background:url(http://localhost:8000/img/2/first.JPG);*/
     background-size: cover !important;
     border:5px solid #fff;
-    box-shadow: 0 20px 30px rgba(0,0,0,.2);
+    /*box-shadow: 0px 10px 20px rgba(0,0,0,.2);*/
+    box-shadow: 0px 7px 11px -1px rgba(194,192,194,0.44);
     transition: 5s;
     background-position: top !important; 
   }

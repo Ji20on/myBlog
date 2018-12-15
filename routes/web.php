@@ -52,7 +52,7 @@ Route::middleware(['auth'])->group(function(){
 /*admin route*/
 Route::get('dashboard', function () {
     return view('auth.dashboard');
-});
+})->name('dashboard');
 
 
 /************************************************BLOG*/

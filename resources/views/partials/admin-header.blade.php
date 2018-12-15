@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
-		<a class="navbar-brand mr-1" href="index.html">ADMIN</a>
+		<a class="navbar-brand mr-1" href="{{ route('dashboard') }}">ADMIN</a>
 		<button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
 			<i class="fa fa-bars"></i>
 		</button>
@@ -23,7 +23,7 @@
 		<!-- Sidebar -->
 		<ul class="sidebar navbar-nav" id="sidebar-id">
 			<li class="nav-item">
-				<a href="dashboard" class="nav-link" href="index.html">
+				<a href="{{ route('dashboard') }}" class="nav-link">
 					<i class="fas fa-fw fa-tachometer-alt"></i>
 					<span>Dashboard</span>
 				</a>
