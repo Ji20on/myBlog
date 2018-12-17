@@ -20,7 +20,7 @@
   integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
   crossorigin="anonymous">
   {{-- font --}}
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700,800" rel="stylesheet">
   {{-- custom css --}}
   <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
   {{-- jquery --}}

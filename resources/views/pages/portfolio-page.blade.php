@@ -6,19 +6,20 @@
  @include('partials.breadcrumbs')
   <input type="hidden" id="link-page" value="port">
   <div class="container port-details">
-  	<div class="row">
-  		<div class="col-sm-12 col-md-6">
+  	<div class="row justify-content-center">
+  		<div class="col-sm-12 col-md-6 col-lg-6 ">
+        <div class="title-port">
   			<h2>{{$portfolio->title}}</h2>
   			<hr>
-  			<span class="">{{$portfolio->category}}</span> <br><br>
-  			<p>{{$portfolio->description}}</p>
-  		</div>
-  		<div class="col-sm-12 col-md-6">
-        <div id="box" class="box" >
+  			<span class="">{{$portfolio->category}}</span>
         </div>
-
-       {{--  <button type="button" onclick="myFunction('{{$portfolio->port_thumb}}')">Set the background image of div</button> --}}
-
+        <div class="description">
+  			<p>{{$portfolio->description}}</p>
+        </div>
+  		</div>
+  		<div class="col-sm-12 col-md-6 col-lg-6">
+        <div id="box" class="box float-lg-right" >
+        </div>
   			{{-- <img id="scroll" class="img-fluid" src="{{ asset($portfolio->port_thumb) }}" alt="http://markjasonlandicho.ml/laravel-filemanager/img/2/first-portfolio.jpg"> --}}
   		</div>
   	</div>
@@ -46,17 +47,11 @@
     </a>
   </div>
   @endforeach
-{{-- {{App\Portfolio::out_of_port($portfolio->id)}} --}}
 </div>
 </div>
 
 
 <script>
-/*var alt = link.getElementsByTagName('img')[0].getAttribute('alt');
-    document.getElementById("box").style.backgroundImage = "url('asset($outOfP->port_thumb)')";*/
-/*function myFunction(source) {
-    document.getElementById("box").style.background = 'url('+source+')';
-}*/
 $(document).ready(function(){
   $('#box').css('background-image', 'url({{$portfolio->port_thumb}})');
 });
